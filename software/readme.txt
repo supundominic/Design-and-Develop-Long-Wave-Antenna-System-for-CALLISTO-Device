@@ -1,1 +1,1 @@
-THis contains important software used for this project
+This contains important software used for this project
