@@ -1,0 +1,433 @@
+CM  Antenna for CALLISTO system
+CM  Proposed Antenna : Crossed Dipole antenna
+CM 
+CM 
+CM GN	-1						
+CM GN	0	0	0	0	14	.006	
+CM 
+CM 
+CE
+SY Z=1.44	'z axis variable
+SY L=1.0	'length variable
+SY A=0.015	'radius of antenna
+SY r=0.001	'radius of ground mesh
+SY T=50	'theta
+SY F=0.099	'For binding to the circuit
+SY grnd_pl=3.6	'ground plane length
+SY mesh_count=12	'mesh count for a one side
+SY G=0.01	'height od ground plane to real ground
+SY P=1.5
+SY Q=1
+SY C=0.013
+GW	1	3	-Q*L*sin(T)-F	0.264L	-Q*L*cos(T)+Z	0-F	0	Z	A	'radius for
+GW	2	3	-P*L*sin(T)-F	0.4L	-P*L*cos(T)+Z	-Q*L*sin(T)-F	0.264L	-Q*L*cos(T)+Z	A
+GW	3	2	-P*L*sin(T)-F	0	-P*L*cos(T)+Z	-P*L*sin(T)-F	0.4L	-P*L*cos(T)+Z	A
+GW	4	2	-P*L*sin(T)-F	-0.4L	-P*L*cos(T)+Z	-P*L*sin(T)-F	0	-P*L*cos(T)+Z	A
+GW	5	3	-P*L*sin(T)-F	-0.4L	-P*L*cos(T)+Z	-Q*L*sin(T)-F	-0.264L	-Q*L*cos(T)+Z	A
+GW	6	3	-Q*L*sin(T)-F	-0.264L	-Q*L*cos(T)+Z	0-F	0	Z	A
+GW	7	2	-Q*L*sin(T)-F	-0.264L	-Q*L*cos(T)+Z	-Q*L*sin(T)-F	0	-Q*L*cos(T)+Z	A
+GW	8	2	-Q*L*sin(T)-F	0	-Q*L*cos(T)+Z	-Q*L*sin(T)-F	0.264L	-Q*L*cos(T)+Z	A
+GW	9	3	-P*L*sin(T)-F	0	-P*L*cos(T)+Z	-Q*L*sin(T)-F	0	-Q*L*cos(T)+Z	A
+GW	10	3	-Q*L*sin(T)-F	0	-Q*L*cos(T)+Z	0-F	0	Z	A
+GW	11	3	0+F	0	Z	Q*L*sin(T)+F	-0.264L	-Q*L*cos(T)+Z	A
+GW	12	3	Q*L*sin(T)+F	-0.264L	-Q*L*cos(T)+Z	P*L*sin(T)+F	-0.4L	-P*L*cos(T)+Z	A
+GW	13	2	P*L*sin(T)+F	-0.4L	-P*L*cos(T)+Z	P*L*sin(T)+F	0	-P*L*cos(T)+Z	A
+GW	14	2	P*L*sin(T)+F	0	-P*L*cos(T)+Z	P*L*sin(T)+F	0.4L	-P*L*cos(T)+Z	A
+GW	15	3	P*L*sin(T)+F	0.4L	-P*L*cos(T)+Z	Q*L*sin(T)+F	0.264L	-Q*L*cos(T)+Z	A
+GW	16	3	Q*L*sin(T)+F	0.264L	-Q*L*cos(T)+Z	0+F	0	Z	A
+GW	17	3	0+F	0	Z	Q*L*sin(T)+F	0	-Q*L*cos(T)+Z	A
+GW	18	3	Q*L*sin(T)+F	0	-Q*L*cos(T)+Z	P*L*sin(T)+F	0	-P*L*cos(T)+Z	A
+GW	19	2	Q*L*sin(T)+F	-0.264L	-Q*L*cos(T)+Z	Q*L*sin(T)+F	0	-Q*L*cos(T)+Z	A
+GW	20	2	Q*L*sin(T)+F	0	-Q*L*cos(T)+Z	Q*L*sin(T)+F	0.264L	-Q*L*cos(T)+Z	A
+GW	21	3	0	0-F	Z	0.264L	-Q*L*sin(T)-F	-Q*L*cos(T)+Z	A
+GW	22	3	0.264L	-Q*L*sin(T)-F	-Q*L*cos(T)+Z	0.4L	-P*L*sin(T)-F	-P*L*cos(T)+Z	A
+GW	23	2	0.4L	-P*L*sin(T)-F	-P*L*cos(T)+Z	0	-P*L*sin(T)-F	-P*L*cos(T)+Z	A
+GW	24	2	0	-P*L*sin(T)-F	-P*L*cos(T)+Z	-0.4L	-P*L*sin(T)-F	-P*L*cos(T)+Z	A
+GW	25	3	-0.4L	-P*L*sin(T)-F	-P*L*cos(T)+Z	-0.264L	-Q*L*sin(T)-F	-Q*L*cos(T)+Z	A
+GW	26	3	-0.264L	-Q*L*sin(T)-F	-Q*L*cos(T)+Z	0	0-F	Z	A
+GW	27	3	0	0-F	Z	0	-Q*L*sin(T)-F	-Q*L*cos(T)+Z	A
+GW	28	3	0	-Q*L*sin(T)-F	-Q*L*cos(T)+Z	0	-P*L*sin(T)-F	-P*L*cos(T)+Z	A
+GW	29	2	-0.264L	-Q*L*sin(T)-F	-Q*L*cos(T)+Z	0	-Q*L*sin(T)-F	-Q*L*cos(T)+Z	A
+GW	30	2	0	-Q*L*sin(T)-F	-Q*L*cos(T)+Z	0.264L	-Q*L*sin(T)-F	-Q*L*cos(T)+Z	A
+GW	31	3	0	0+F	Z	0.264L	Q*L*sin(T)+F	-Q*L*cos(T)+Z	A
+GW	32	3	0.264L	Q*L*sin(T)+F	-Q*L*cos(T)+Z	0.4L	P*L*sin(T)+F	-P*L*cos(T)+Z	A
+GW	33	2	0.4L	P*L*sin(T)+F	-P*L*cos(T)+Z	0	P*L*sin(T)+F	-P*L*cos(T)+Z	A
+GW	34	2	0	P*L*sin(T)+F	-P*L*cos(T)+Z	-0.4L	P*L*sin(T)+F	-P*L*cos(T)+Z	A
+GW	35	3	-0.4L	P*L*sin(T)+F	-P*L*cos(T)+Z	-0.264L	Q*L*sin(T)+F	-Q*L*cos(T)+Z	A
+GW	36	3	-0.264L	Q*L*sin(T)+F	-Q*L*cos(T)+Z	0	0+F	Z	A
+GW	37	3	0	0+F	Z	0	Q*L*sin(T)+F	-Q*L*cos(T)+Z	A
+GW	38	3	0	Q*L*sin(T)+F	-Q*L*cos(T)+Z	0	P*L*sin(T)+F	-P*L*cos(T)+Z	A
+GW	39	2	0	Q*L*sin(T)+F	-Q*L*cos(T)+Z	0.264L	Q*L*sin(T)+F	-Q*L*cos(T)+Z	A
+GW	40	2	0	Q*L*sin(T)+F	-Q*L*cos(T)+Z	-0.264L	Q*L*sin(T)+F	-Q*L*cos(T)+Z	A
+GW	41	1	0	grnd_pl/2	G	grnd_pl/12	grnd_pl/2	G	r
+GW	42	1	grnd_pl/12	grnd_pl/2	G	2*grnd_pl/12	grnd_pl/2	G	r
+GW	43	1	2*grnd_pl/12	grnd_pl/2	G	3*grnd_pl/12	grnd_pl/2	G	r
+GW	44	1	3*grnd_pl/12	grnd_pl/2	G	4*grnd_pl/12	grnd_pl/2	G	r
+GW	45	1	4*grnd_pl/12	grnd_pl/2	G	5*grnd_pl/12	grnd_pl/2	G	r
+GW	46	1	5*grnd_pl/12	grnd_pl/2	G	6*grnd_pl/12	grnd_pl/2	G	r
+GW	47	1	0	grnd_pl/2	G	-grnd_pl/12	grnd_pl/2	G	r
+GW	48	1	-grnd_pl/12	grnd_pl/2	G	-2*grnd_pl/12	grnd_pl/2	G	r
+GW	49	1	-2*grnd_pl/12	grnd_pl/2	G	-3*grnd_pl/12	grnd_pl/2	G	r
+GW	50	1	-3*grnd_pl/12	grnd_pl/2	G	-4*grnd_pl/12	grnd_pl/2	G	r
+GW	51	1	-4*grnd_pl/12	grnd_pl/2	G	-5*grnd_pl/12	grnd_pl/2	G	r
+GW	52	1	-5*grnd_pl/12	grnd_pl/2	G	-6*grnd_pl/12	grnd_pl/2	G	r
+GW	53	1	0	-grnd_pl/2	G	grnd_pl/12	-grnd_pl/2	G	r
+GW	54	1	grnd_pl/12	-grnd_pl/2	G	2*grnd_pl/12	-grnd_pl/2	G	r
+GW	55	1	2*grnd_pl/12	-grnd_pl/2	G	3*grnd_pl/12	-grnd_pl/2	G	r
+GW	56	1	3*grnd_pl/12	-grnd_pl/2	G	4*grnd_pl/12	-grnd_pl/2	G	r
+GW	57	1	4*grnd_pl/12	-grnd_pl/2	G	5*grnd_pl/12	-grnd_pl/2	G	r
+GW	58	1	5*grnd_pl/12	-grnd_pl/2	G	6*grnd_pl/12	-grnd_pl/2	G	r
+GW	59	1	0	-grnd_pl/2	G	-grnd_pl/12	-grnd_pl/2	G	r
+GW	60	1	-grnd_pl/12	-grnd_pl/2	G	-2*grnd_pl/12	-grnd_pl/2	G	r
+GW	61	1	-2*grnd_pl/12	-grnd_pl/2	G	-3*grnd_pl/12	-grnd_pl/2	G	r
+GW	62	1	-3*grnd_pl/12	-grnd_pl/2	G	-4*grnd_pl/12	-grnd_pl/2	G	r
+GW	63	1	-4*grnd_pl/12	-grnd_pl/2	G	-5*grnd_pl/12	-grnd_pl/2	G	r
+GW	64	1	-5*grnd_pl/12	-grnd_pl/2	G	-6*grnd_pl/12	-grnd_pl/2	G	r
+GW	65	1	-grnd_pl/2	0	G	-grnd_pl/2	-grnd_pl/12	G	r
+GW	66	1	-grnd_pl/2	-grnd_pl/12	G	-grnd_pl/2	-2*grnd_pl/12	G	r
+GW	67	1	-grnd_pl/2	-2*grnd_pl/12	G	-grnd_pl/2	-3*grnd_pl/12	G	r
+GW	68	1	-grnd_pl/2	-3*grnd_pl/12	G	-grnd_pl/2	-4*grnd_pl/12	G	r
+GW	69	1	-grnd_pl/2	-4*grnd_pl/12	G	-grnd_pl/2	-5*grnd_pl/12	G	r
+GW	70	1	-grnd_pl/2	-5*grnd_pl/12	G	-grnd_pl/2	-6*grnd_pl/12	G	r
+GW	71	1	-grnd_pl/2	0	G	-grnd_pl/2	grnd_pl/12	G	r
+GW	72	1	-grnd_pl/2	grnd_pl/12	G	-grnd_pl/2	2*grnd_pl/12	G	r
+GW	73	1	-grnd_pl/2	2*grnd_pl/12	G	-grnd_pl/2	3*grnd_pl/12	G	r
+GW	74	1	-grnd_pl/2	3*grnd_pl/12	G	-grnd_pl/2	4*grnd_pl/12	G	r
+GW	75	1	-grnd_pl/2	4*grnd_pl/12	G	-grnd_pl/2	5*grnd_pl/12	G	r
+GW	76	1	-grnd_pl/2	5*grnd_pl/12	G	-grnd_pl/2	6*grnd_pl/12	G	r
+GW	77	1	6*grnd_pl/12	0	G	grnd_pl/2	-grnd_pl/12	G	r
+GW	78	1	6*grnd_pl/12	-grnd_pl/12	G	grnd_pl/2	-2*grnd_pl/12	G	r
+GW	79	1	6*grnd_pl/12	-2*grnd_pl/12	G	grnd_pl/2	-3*grnd_pl/12	G	r
+GW	80	1	6*grnd_pl/12	-3*grnd_pl/12	G	grnd_pl/2	-4*grnd_pl/12	G	r
+GW	81	1	6*grnd_pl/12	-4*grnd_pl/12	G	grnd_pl/2	-5*grnd_pl/12	G	r
+GW	82	1	6*grnd_pl/12	-5*grnd_pl/12	G	grnd_pl/2	-6*grnd_pl/12	G	r
+GW	83	1	6*grnd_pl/12	0	G	grnd_pl/2	grnd_pl/12	G	r
+GW	84	1	6*grnd_pl/12	grnd_pl/12	G	grnd_pl/2	2*grnd_pl/12	G	r
+GW	85	1	6*grnd_pl/12	2*grnd_pl/12	G	grnd_pl/2	3*grnd_pl/12	G	r
+GW	86	1	6*grnd_pl/12	3*grnd_pl/12	G	grnd_pl/2	4*grnd_pl/12	G	r
+GW	87	1	6*grnd_pl/12	4*grnd_pl/12	G	grnd_pl/2	5*grnd_pl/12	G	r
+GW	88	1	6*grnd_pl/12	5*grnd_pl/12	G	grnd_pl/2	6*grnd_pl/12	G	r
+GW	89	1	5*grnd_pl/12	0	G	5*grnd_pl/12	-grnd_pl/12	G	r
+GW	90	1	5*grnd_pl/12	-grnd_pl/12	G	5*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	91	1	5*grnd_pl/12	-2*grnd_pl/12	G	5*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	92	1	5*grnd_pl/12	-3*grnd_pl/12	G	5*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	93	1	5*grnd_pl/12	-4*grnd_pl/12	G	5*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	94	1	5*grnd_pl/12	-5*grnd_pl/12	G	5*grnd_pl/12	-6*grnd_pl/12	G	r
+GW	95	1	5*grnd_pl/12	0	G	5*grnd_pl/12	grnd_pl/12	G	r
+GW	96	1	5*grnd_pl/12	grnd_pl/12	G	5*grnd_pl/12	2*grnd_pl/12	G	r
+GW	97	1	5*grnd_pl/12	2*grnd_pl/12	G	5*grnd_pl/12	3*grnd_pl/12	G	r
+GW	98	1	5*grnd_pl/12	3*grnd_pl/12	G	5*grnd_pl/12	4*grnd_pl/12	G	r
+GW	99	1	5*grnd_pl/12	4*grnd_pl/12	G	5*grnd_pl/12	5*grnd_pl/12	G	r
+GW	100	1	5*grnd_pl/12	5*grnd_pl/12	G	5*grnd_pl/12	6*grnd_pl/12	G	r
+GW	101	1	4*grnd_pl/12	0	G	4*grnd_pl/12	-grnd_pl/12	G	r
+GW	102	1	4*grnd_pl/12	-grnd_pl/12	G	4*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	103	1	4*grnd_pl/12	-2*grnd_pl/12	G	4*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	104	1	4*grnd_pl/12	-3*grnd_pl/12	G	4*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	105	1	4*grnd_pl/12	-4*grnd_pl/12	G	4*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	106	1	4*grnd_pl/12	-5*grnd_pl/12	G	4*grnd_pl/12	-6*grnd_pl/12	G	r
+GW	107	1	4*grnd_pl/12	0	G	4*grnd_pl/12	grnd_pl/12	G	r
+GW	108	1	4*grnd_pl/12	grnd_pl/12	G	4*grnd_pl/12	2*grnd_pl/12	G	r
+GW	109	1	4*grnd_pl/12	2*grnd_pl/12	G	4*grnd_pl/12	3*grnd_pl/12	G	r
+GW	110	1	4*grnd_pl/12	3*grnd_pl/12	G	4*grnd_pl/12	4*grnd_pl/12	G	r
+GW	111	1	4*grnd_pl/12	4*grnd_pl/12	G	4*grnd_pl/12	5*grnd_pl/12	G	r
+GW	112	1	4*grnd_pl/12	5*grnd_pl/12	G	4*grnd_pl/12	6*grnd_pl/12	G	r
+GW	113	1	3*grnd_pl/12	0	G	3*grnd_pl/12	-grnd_pl/12	G	r
+GW	114	1	3*grnd_pl/12	-grnd_pl/12	G	3*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	115	1	3*grnd_pl/12	-2*grnd_pl/12	G	3*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	116	1	3*grnd_pl/12	-3*grnd_pl/12	G	3*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	117	1	3*grnd_pl/12	-4*grnd_pl/12	G	3*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	118	1	3*grnd_pl/12	-5*grnd_pl/12	G	3*grnd_pl/12	-6*grnd_pl/12	G	r
+GW	119	1	3*grnd_pl/12	0	G	3*grnd_pl/12	grnd_pl/12	G	r
+GW	120	1	3*grnd_pl/12	grnd_pl/12	G	3*grnd_pl/12	2*grnd_pl/12	G	r
+GW	121	1	3*grnd_pl/12	2*grnd_pl/12	G	3*grnd_pl/12	3*grnd_pl/12	G	r
+GW	122	1	3*grnd_pl/12	3*grnd_pl/12	G	3*grnd_pl/12	4*grnd_pl/12	G	r
+GW	123	1	3*grnd_pl/12	4*grnd_pl/12	G	3*grnd_pl/12	5*grnd_pl/12	G	r
+GW	124	1	3*grnd_pl/12	5*grnd_pl/12	G	3*grnd_pl/12	6*grnd_pl/12	G	r
+GW	125	1	2*grnd_pl/12	0	G	2*grnd_pl/12	-grnd_pl/12	G	r
+GW	126	1	2*grnd_pl/12	-grnd_pl/12	G	2*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	127	1	2*grnd_pl/12	-2*grnd_pl/12	G	2*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	128	1	2*grnd_pl/12	-3*grnd_pl/12	G	2*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	129	1	2*grnd_pl/12	-4*grnd_pl/12	G	2*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	130	1	2*grnd_pl/12	-5*grnd_pl/12	G	2*grnd_pl/12	-6*grnd_pl/12	G	r
+GW	131	1	2*grnd_pl/12	0	G	2*grnd_pl/12	grnd_pl/12	G	r
+GW	132	1	2*grnd_pl/12	grnd_pl/12	G	2*grnd_pl/12	2*grnd_pl/12	G	r
+GW	133	1	2*grnd_pl/12	2*grnd_pl/12	G	2*grnd_pl/12	3*grnd_pl/12	G	r
+GW	134	1	2*grnd_pl/12	3*grnd_pl/12	G	2*grnd_pl/12	4*grnd_pl/12	G	r
+GW	135	1	2*grnd_pl/12	4*grnd_pl/12	G	2*grnd_pl/12	5*grnd_pl/12	G	r
+GW	136	1	2*grnd_pl/12	5*grnd_pl/12	G	2*grnd_pl/12	6*grnd_pl/12	G	r
+GW	137	1	1*grnd_pl/12	0	G	1*grnd_pl/12	-grnd_pl/12	G	r
+GW	138	1	1*grnd_pl/12	-grnd_pl/12	G	1*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	139	1	1*grnd_pl/12	-2*grnd_pl/12	G	1*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	140	1	1*grnd_pl/12	-3*grnd_pl/12	G	1*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	141	1	1*grnd_pl/12	-4*grnd_pl/12	G	1*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	142	1	1*grnd_pl/12	-5*grnd_pl/12	G	1*grnd_pl/12	-6*grnd_pl/12	G	r
+GW	143	1	1*grnd_pl/12	0	G	1*grnd_pl/12	grnd_pl/12	G	r
+GW	144	1	1*grnd_pl/12	grnd_pl/12	G	1*grnd_pl/12	2*grnd_pl/12	G	r
+GW	145	1	1*grnd_pl/12	2*grnd_pl/12	G	1*grnd_pl/12	3*grnd_pl/12	G	r
+GW	146	1	1*grnd_pl/12	3*grnd_pl/12	G	1*grnd_pl/12	4*grnd_pl/12	G	r
+GW	147	1	1*grnd_pl/12	4*grnd_pl/12	G	1*grnd_pl/12	5*grnd_pl/12	G	r
+GW	148	1	1*grnd_pl/12	5*grnd_pl/12	G	1*grnd_pl/12	6*grnd_pl/12	G	r
+GW	149	1	0*grnd_pl/12	0	G	0*grnd_pl/12	-grnd_pl/12	G	r
+GW	150	1	0*grnd_pl/12	-grnd_pl/12	G	0*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	151	1	0*grnd_pl/12	-2*grnd_pl/12	G	0*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	152	1	0*grnd_pl/12	-3*grnd_pl/12	G	0*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	153	1	0*grnd_pl/12	-4*grnd_pl/12	G	0*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	154	1	0*grnd_pl/12	-5*grnd_pl/12	G	0*grnd_pl/12	-6*grnd_pl/12	G	r
+GW	155	1	0*grnd_pl/12	0	G	0*grnd_pl/12	grnd_pl/12	G	r
+GW	156	1	0*grnd_pl/12	grnd_pl/12	G	0*grnd_pl/12	2*grnd_pl/12	G	r
+GW	157	1	0*grnd_pl/12	2*grnd_pl/12	G	0*grnd_pl/12	3*grnd_pl/12	G	r
+GW	158	1	0*grnd_pl/12	3*grnd_pl/12	G	0*grnd_pl/12	4*grnd_pl/12	G	r
+GW	159	1	0*grnd_pl/12	4*grnd_pl/12	G	0*grnd_pl/12	5*grnd_pl/12	G	r
+GW	160	1	0*grnd_pl/12	5*grnd_pl/12	G	0*grnd_pl/12	6*grnd_pl/12	G	r
+GW	161	1	-1*grnd_pl/12	0	G	-1*grnd_pl/12	-grnd_pl/12	G	r
+GW	162	1	-1*grnd_pl/12	-grnd_pl/12	G	-1*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	163	1	-1*grnd_pl/12	-2*grnd_pl/12	G	-1*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	164	1	-1*grnd_pl/12	-3*grnd_pl/12	G	-1*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	165	1	-1*grnd_pl/12	-4*grnd_pl/12	G	-1*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	166	1	-1*grnd_pl/12	-5*grnd_pl/12	G	-1*grnd_pl/12	-6*grnd_pl/12	G	r
+GW	167	1	-1*grnd_pl/12	0	G	-1*grnd_pl/12	grnd_pl/12	G	r
+GW	168	1	-1*grnd_pl/12	grnd_pl/12	G	-1*grnd_pl/12	2*grnd_pl/12	G	r
+GW	169	1	-1*grnd_pl/12	2*grnd_pl/12	G	-1*grnd_pl/12	3*grnd_pl/12	G	r
+GW	170	1	-1*grnd_pl/12	3*grnd_pl/12	G	-1*grnd_pl/12	4*grnd_pl/12	G	r
+GW	171	1	-1*grnd_pl/12	4*grnd_pl/12	G	-1*grnd_pl/12	5*grnd_pl/12	G	r
+GW	172	1	-1*grnd_pl/12	5*grnd_pl/12	G	-1*grnd_pl/12	6*grnd_pl/12	G	r
+GW	173	1	-2*grnd_pl/12	0	G	-2*grnd_pl/12	-grnd_pl/12	G	r
+GW	174	1	-2*grnd_pl/12	-grnd_pl/12	G	-2*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	175	1	-2*grnd_pl/12	-2*grnd_pl/12	G	-2*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	176	1	-2*grnd_pl/12	-3*grnd_pl/12	G	-2*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	177	1	-2*grnd_pl/12	-4*grnd_pl/12	G	-2*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	178	1	-2*grnd_pl/12	-5*grnd_pl/12	G	-2*grnd_pl/12	-6*grnd_pl/12	G	r
+GW	179	1	-2*grnd_pl/12	0	G	-2*grnd_pl/12	grnd_pl/12	G	r
+GW	180	1	-2*grnd_pl/12	grnd_pl/12	G	-2*grnd_pl/12	2*grnd_pl/12	G	r
+GW	181	1	-2*grnd_pl/12	2*grnd_pl/12	G	-2*grnd_pl/12	3*grnd_pl/12	G	r
+GW	182	1	-2*grnd_pl/12	3*grnd_pl/12	G	-2*grnd_pl/12	4*grnd_pl/12	G	r
+GW	183	1	-2*grnd_pl/12	4*grnd_pl/12	G	-2*grnd_pl/12	5*grnd_pl/12	G	r
+GW	184	1	-2*grnd_pl/12	5*grnd_pl/12	G	-2*grnd_pl/12	6*grnd_pl/12	G	r
+GW	185	1	-3*grnd_pl/12	0	G	-3*grnd_pl/12	-grnd_pl/12	G	r
+GW	186	1	-3*grnd_pl/12	-grnd_pl/12	G	-3*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	187	1	-3*grnd_pl/12	-2*grnd_pl/12	G	-3*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	188	1	-3*grnd_pl/12	-3*grnd_pl/12	G	-3*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	189	1	-3*grnd_pl/12	-4*grnd_pl/12	G	-3*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	190	1	-3*grnd_pl/12	-5*grnd_pl/12	G	-3*grnd_pl/12	-6*grnd_pl/12	G	r
+GW	191	1	-3*grnd_pl/12	0	G	-3*grnd_pl/12	grnd_pl/12	G	r
+GW	192	1	-3*grnd_pl/12	grnd_pl/12	G	-3*grnd_pl/12	2*grnd_pl/12	G	r
+GW	193	1	-3*grnd_pl/12	2*grnd_pl/12	G	-3*grnd_pl/12	3*grnd_pl/12	G	r
+GW	194	1	-3*grnd_pl/12	3*grnd_pl/12	G	-3*grnd_pl/12	4*grnd_pl/12	G	r
+GW	195	1	-3*grnd_pl/12	4*grnd_pl/12	G	-3*grnd_pl/12	5*grnd_pl/12	G	r
+GW	196	1	-3*grnd_pl/12	5*grnd_pl/12	G	-3*grnd_pl/12	6*grnd_pl/12	G	r
+GW	197	1	-4*grnd_pl/12	0	G	-4*grnd_pl/12	-grnd_pl/12	G	r
+GW	198	1	-4*grnd_pl/12	-grnd_pl/12	G	-4*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	199	1	-4*grnd_pl/12	-2*grnd_pl/12	G	-4*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	200	1	-4*grnd_pl/12	-3*grnd_pl/12	G	-4*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	201	1	-4*grnd_pl/12	-4*grnd_pl/12	G	-4*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	202	1	-4*grnd_pl/12	-5*grnd_pl/12	G	-4*grnd_pl/12	-6*grnd_pl/12	G	r
+GW	203	1	-4*grnd_pl/12	0	G	-4*grnd_pl/12	grnd_pl/12	G	r
+GW	204	1	-4*grnd_pl/12	grnd_pl/12	G	-4*grnd_pl/12	2*grnd_pl/12	G	r
+GW	205	1	-4*grnd_pl/12	2*grnd_pl/12	G	-4*grnd_pl/12	3*grnd_pl/12	G	r
+GW	206	1	-4*grnd_pl/12	3*grnd_pl/12	G	-4*grnd_pl/12	4*grnd_pl/12	G	r
+GW	207	1	-4*grnd_pl/12	4*grnd_pl/12	G	-4*grnd_pl/12	5*grnd_pl/12	G	r
+GW	208	1	-4*grnd_pl/12	5*grnd_pl/12	G	-4*grnd_pl/12	6*grnd_pl/12	G	r
+GW	209	1	-5*grnd_pl/12	0	G	-5*grnd_pl/12	-grnd_pl/12	G	r
+GW	210	1	-5*grnd_pl/12	-grnd_pl/12	G	-5*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	211	1	-5*grnd_pl/12	-2*grnd_pl/12	G	-5*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	212	1	-5*grnd_pl/12	-3*grnd_pl/12	G	-5*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	213	1	-5*grnd_pl/12	-4*grnd_pl/12	G	-5*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	214	1	-5*grnd_pl/12	-5*grnd_pl/12	G	-5*grnd_pl/12	-6*grnd_pl/12	G	r
+GW	215	1	-5*grnd_pl/12	0	G	-5*grnd_pl/12	grnd_pl/12	G	r
+GW	216	1	-5*grnd_pl/12	grnd_pl/12	G	-5*grnd_pl/12	2*grnd_pl/12	G	r
+GW	217	1	-5*grnd_pl/12	2*grnd_pl/12	G	-5*grnd_pl/12	3*grnd_pl/12	G	r
+GW	218	1	-5*grnd_pl/12	3*grnd_pl/12	G	-5*grnd_pl/12	4*grnd_pl/12	G	r
+GW	219	1	-5*grnd_pl/12	4*grnd_pl/12	G	-5*grnd_pl/12	5*grnd_pl/12	G	r
+GW	220	1	-5*grnd_pl/12	5*grnd_pl/12	G	-5*grnd_pl/12	6*grnd_pl/12	G	r
+GW	221	1	0	-5*grnd_pl/12	G	grnd_pl/12	-5*grnd_pl/12	G	r
+GW	222	1	grnd_pl/12	-5*grnd_pl/12	G	2*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	223	1	2*grnd_pl/12	-5*grnd_pl/12	G	3*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	224	1	3*grnd_pl/12	-5*grnd_pl/12	G	4*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	225	1	4*grnd_pl/12	-5*grnd_pl/12	G	5*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	226	1	5*grnd_pl/12	-5*grnd_pl/12	G	6*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	227	1	0	-5*grnd_pl/12	G	-grnd_pl/12	-5*grnd_pl/12	G	r
+GW	228	1	-grnd_pl/12	-5*grnd_pl/12	G	-2*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	229	1	-2*grnd_pl/12	-5*grnd_pl/12	G	-3*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	230	1	-3*grnd_pl/12	-5*grnd_pl/12	G	-4*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	231	1	-4*grnd_pl/12	-5*grnd_pl/12	G	-5*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	232	1	-5*grnd_pl/12	-5*grnd_pl/12	G	-6*grnd_pl/12	-5*grnd_pl/12	G	r
+GW	233	1	0	-4*grnd_pl/12	G	grnd_pl/12	-4*grnd_pl/12	G	r
+GW	234	1	grnd_pl/12	-4*grnd_pl/12	G	2*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	235	1	2*grnd_pl/12	-4*grnd_pl/12	G	3*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	236	1	3*grnd_pl/12	-4*grnd_pl/12	G	4*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	237	1	4*grnd_pl/12	-4*grnd_pl/12	G	5*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	238	1	5*grnd_pl/12	-4*grnd_pl/12	G	6*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	239	1	0	-4*grnd_pl/12	G	-grnd_pl/12	-4*grnd_pl/12	G	r
+GW	240	1	-grnd_pl/12	-4*grnd_pl/12	G	-2*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	241	1	-2*grnd_pl/12	-4*grnd_pl/12	G	-3*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	242	1	-3*grnd_pl/12	-4*grnd_pl/12	G	-4*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	243	1	-4*grnd_pl/12	-4*grnd_pl/12	G	-5*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	244	1	-5*grnd_pl/12	-4*grnd_pl/12	G	-6*grnd_pl/12	-4*grnd_pl/12	G	r
+GW	245	1	0	-3*grnd_pl/12	G	grnd_pl/12	-3*grnd_pl/12	G	r
+GW	246	1	grnd_pl/12	-3*grnd_pl/12	G	2*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	247	1	2*grnd_pl/12	-3*grnd_pl/12	G	3*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	248	1	3*grnd_pl/12	-3*grnd_pl/12	G	4*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	249	1	4*grnd_pl/12	-3*grnd_pl/12	G	5*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	250	1	5*grnd_pl/12	-3*grnd_pl/12	G	6*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	251	1	0	-3*grnd_pl/12	G	-grnd_pl/12	-3*grnd_pl/12	G	r
+GW	252	1	-grnd_pl/12	-3*grnd_pl/12	G	-2*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	253	1	-2*grnd_pl/12	-3*grnd_pl/12	G	-3*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	254	1	-3*grnd_pl/12	-3*grnd_pl/12	G	-4*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	255	1	-4*grnd_pl/12	-3*grnd_pl/12	G	-5*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	256	1	-5*grnd_pl/12	-3*grnd_pl/12	G	-6*grnd_pl/12	-3*grnd_pl/12	G	r
+GW	257	1	0	-2*grnd_pl/12	G	grnd_pl/12	-2*grnd_pl/12	G	r
+GW	258	1	grnd_pl/12	-2*grnd_pl/12	G	2*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	259	1	2*grnd_pl/12	-2*grnd_pl/12	G	3*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	260	1	3*grnd_pl/12	-2*grnd_pl/12	G	4*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	261	1	4*grnd_pl/12	-2*grnd_pl/12	G	5*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	262	1	5*grnd_pl/12	-2*grnd_pl/12	G	6*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	263	1	0	-2*grnd_pl/12	G	-grnd_pl/12	-2*grnd_pl/12	G	r
+GW	264	1	-grnd_pl/12	-2*grnd_pl/12	G	-2*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	265	1	-2*grnd_pl/12	-2*grnd_pl/12	G	-3*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	266	1	-3*grnd_pl/12	-2*grnd_pl/12	G	-4*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	267	1	-4*grnd_pl/12	-2*grnd_pl/12	G	-5*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	268	1	-5*grnd_pl/12	-2*grnd_pl/12	G	-6*grnd_pl/12	-2*grnd_pl/12	G	r
+GW	269	1	0	-1*grnd_pl/12	G	grnd_pl/12	-1*grnd_pl/12	G	r
+GW	270	1	grnd_pl/12	-1*grnd_pl/12	G	2*grnd_pl/12	-1*grnd_pl/12	G	r
+GW	271	1	2*grnd_pl/12	-1*grnd_pl/12	G	3*grnd_pl/12	-1*grnd_pl/12	G	r
+GW	272	1	3*grnd_pl/12	-1*grnd_pl/12	G	4*grnd_pl/12	-1*grnd_pl/12	G	r
+GW	273	1	4*grnd_pl/12	-1*grnd_pl/12	G	5*grnd_pl/12	-1*grnd_pl/12	G	r
+GW	274	1	5*grnd_pl/12	-1*grnd_pl/12	G	6*grnd_pl/12	-1*grnd_pl/12	G	r
+GW	275	1	0	-1*grnd_pl/12	G	-grnd_pl/12	-1*grnd_pl/12	G	r
+GW	276	1	-grnd_pl/12	-1*grnd_pl/12	G	-2*grnd_pl/12	-1*grnd_pl/12	G	r
+GW	277	1	-2*grnd_pl/12	-1*grnd_pl/12	G	-3*grnd_pl/12	-1*grnd_pl/12	G	r
+GW	278	1	-3*grnd_pl/12	-1*grnd_pl/12	G	-4*grnd_pl/12	-1*grnd_pl/12	G	r
+GW	279	1	-4*grnd_pl/12	-1*grnd_pl/12	G	-5*grnd_pl/12	-1*grnd_pl/12	G	r
+GW	280	1	-5*grnd_pl/12	-1*grnd_pl/12	G	-6*grnd_pl/12	-1*grnd_pl/12	G	r
+GW	281	1	0	-0*grnd_pl/12	G	grnd_pl/12	-0*grnd_pl/12	G	r
+GW	282	1	grnd_pl/12	-0*grnd_pl/12	G	2*grnd_pl/12	-0*grnd_pl/12	G	r
+GW	283	1	2*grnd_pl/12	-0*grnd_pl/12	G	3*grnd_pl/12	-0*grnd_pl/12	G	r
+GW	284	1	3*grnd_pl/12	-0*grnd_pl/12	G	4*grnd_pl/12	-0*grnd_pl/12	G	r
+GW	285	1	4*grnd_pl/12	-0*grnd_pl/12	G	5*grnd_pl/12	-0*grnd_pl/12	G	r
+GW	286	1	5*grnd_pl/12	-0*grnd_pl/12	G	6*grnd_pl/12	-0*grnd_pl/12	G	r
+GW	287	1	0	-0*grnd_pl/12	G	-grnd_pl/12	-0*grnd_pl/12	G	r
+GW	288	1	-grnd_pl/12	-0*grnd_pl/12	G	-2*grnd_pl/12	-0*grnd_pl/12	G	r
+GW	289	1	-2*grnd_pl/12	-0*grnd_pl/12	G	-3*grnd_pl/12	-0*grnd_pl/12	G	r
+GW	290	1	-3*grnd_pl/12	-0*grnd_pl/12	G	-4*grnd_pl/12	-0*grnd_pl/12	G	r
+GW	291	1	-4*grnd_pl/12	-0*grnd_pl/12	G	-5*grnd_pl/12	-0*grnd_pl/12	G	r
+GW	292	1	-5*grnd_pl/12	-0*grnd_pl/12	G	-6*grnd_pl/12	-0*grnd_pl/12	G	r
+GW	293	1	0	2*grnd_pl/12	G	grnd_pl/12	2*grnd_pl/12	G	r
+GW	294	1	grnd_pl/12	2*grnd_pl/12	G	2*grnd_pl/12	2*grnd_pl/12	G	r
+GW	295	1	2*grnd_pl/12	2*grnd_pl/12	G	3*grnd_pl/12	2*grnd_pl/12	G	r
+GW	296	1	3*grnd_pl/12	2*grnd_pl/12	G	4*grnd_pl/12	2*grnd_pl/12	G	r
+GW	297	1	4*grnd_pl/12	2*grnd_pl/12	G	5*grnd_pl/12	2*grnd_pl/12	G	r
+GW	298	1	5*grnd_pl/12	2*grnd_pl/12	G	6*grnd_pl/12	2*grnd_pl/12	G	r
+GW	299	1	0	2*grnd_pl/12	G	-grnd_pl/12	2*grnd_pl/12	G	r
+GW	300	1	-grnd_pl/12	2*grnd_pl/12	G	-2*grnd_pl/12	2*grnd_pl/12	G	r
+GW	301	1	-2*grnd_pl/12	2*grnd_pl/12	G	-3*grnd_pl/12	2*grnd_pl/12	G	r
+GW	302	1	-3*grnd_pl/12	2*grnd_pl/12	G	-4*grnd_pl/12	2*grnd_pl/12	G	r
+GW	303	1	-4*grnd_pl/12	2*grnd_pl/12	G	-5*grnd_pl/12	2*grnd_pl/12	G	r
+GW	304	1	-5*grnd_pl/12	2*grnd_pl/12	G	-6*grnd_pl/12	2*grnd_pl/12	G	r
+GW	305	1	0	3*grnd_pl/12	G	grnd_pl/12	3*grnd_pl/12	G	r
+GW	306	1	grnd_pl/12	3*grnd_pl/12	G	2*grnd_pl/12	3*grnd_pl/12	G	r
+GW	307	1	2*grnd_pl/12	3*grnd_pl/12	G	3*grnd_pl/12	3*grnd_pl/12	G	r
+GW	308	1	3*grnd_pl/12	3*grnd_pl/12	G	4*grnd_pl/12	3*grnd_pl/12	G	r
+GW	309	1	4*grnd_pl/12	3*grnd_pl/12	G	5*grnd_pl/12	3*grnd_pl/12	G	r
+GW	310	1	5*grnd_pl/12	3*grnd_pl/12	G	6*grnd_pl/12	3*grnd_pl/12	G	r
+GW	311	1	0	3*grnd_pl/12	G	-grnd_pl/12	3*grnd_pl/12	G	r
+GW	312	1	-grnd_pl/12	3*grnd_pl/12	G	-2*grnd_pl/12	3*grnd_pl/12	G	r
+GW	313	1	-2*grnd_pl/12	3*grnd_pl/12	G	-3*grnd_pl/12	3*grnd_pl/12	G	r
+GW	314	1	-3*grnd_pl/12	3*grnd_pl/12	G	-4*grnd_pl/12	3*grnd_pl/12	G	r
+GW	315	1	-4*grnd_pl/12	3*grnd_pl/12	G	-5*grnd_pl/12	3*grnd_pl/12	G	r
+GW	316	1	-5*grnd_pl/12	3*grnd_pl/12	G	-6*grnd_pl/12	3*grnd_pl/12	G	r
+GW	317	1	0	4*grnd_pl/12	G	grnd_pl/12	4*grnd_pl/12	G	r
+GW	318	1	grnd_pl/12	4*grnd_pl/12	G	2*grnd_pl/12	4*grnd_pl/12	G	r
+GW	319	1	2*grnd_pl/12	4*grnd_pl/12	G	3*grnd_pl/12	4*grnd_pl/12	G	r
+GW	320	1	3*grnd_pl/12	4*grnd_pl/12	G	4*grnd_pl/12	4*grnd_pl/12	G	r
+GW	321	1	4*grnd_pl/12	4*grnd_pl/12	G	5*grnd_pl/12	4*grnd_pl/12	G	r
+GW	322	1	5*grnd_pl/12	4*grnd_pl/12	G	6*grnd_pl/12	4*grnd_pl/12	G	r
+GW	323	1	0	4*grnd_pl/12	G	-grnd_pl/12	4*grnd_pl/12	G	r
+GW	324	1	-grnd_pl/12	4*grnd_pl/12	G	-2*grnd_pl/12	4*grnd_pl/12	G	r
+GW	325	1	-2*grnd_pl/12	4*grnd_pl/12	G	-3*grnd_pl/12	4*grnd_pl/12	G	r
+GW	326	1	-3*grnd_pl/12	4*grnd_pl/12	G	-4*grnd_pl/12	4*grnd_pl/12	G	r
+GW	327	1	-4*grnd_pl/12	4*grnd_pl/12	G	-5*grnd_pl/12	4*grnd_pl/12	G	r
+GW	328	1	-5*grnd_pl/12	4*grnd_pl/12	G	-6*grnd_pl/12	4*grnd_pl/12	G	r
+GW	329	1	0	5*grnd_pl/12	G	grnd_pl/12	5*grnd_pl/12	G	r
+GW	330	1	grnd_pl/12	5*grnd_pl/12	G	2*grnd_pl/12	5*grnd_pl/12	G	r
+GW	331	1	2*grnd_pl/12	5*grnd_pl/12	G	3*grnd_pl/12	5*grnd_pl/12	G	r
+GW	332	1	3*grnd_pl/12	5*grnd_pl/12	G	4*grnd_pl/12	5*grnd_pl/12	G	r
+GW	333	1	4*grnd_pl/12	5*grnd_pl/12	G	5*grnd_pl/12	5*grnd_pl/12	G	r
+GW	334	1	5*grnd_pl/12	5*grnd_pl/12	G	6*grnd_pl/12	5*grnd_pl/12	G	r
+GW	335	1	0	5*grnd_pl/12	G	-grnd_pl/12	5*grnd_pl/12	G	r
+GW	336	1	-grnd_pl/12	5*grnd_pl/12	G	-2*grnd_pl/12	5*grnd_pl/12	G	r
+GW	337	1	-2*grnd_pl/12	5*grnd_pl/12	G	-3*grnd_pl/12	5*grnd_pl/12	G	r
+GW	338	1	-3*grnd_pl/12	5*grnd_pl/12	G	-4*grnd_pl/12	5*grnd_pl/12	G	r
+GW	339	1	-4*grnd_pl/12	5*grnd_pl/12	G	-5*grnd_pl/12	5*grnd_pl/12	G	r
+GW	340	1	-5*grnd_pl/12	5*grnd_pl/12	G	-6*grnd_pl/12	5*grnd_pl/12	G	r
+GW	341	1	0	1*grnd_pl/12	G	grnd_pl/12	1*grnd_pl/12	G	r
+GW	342	1	grnd_pl/12	1*grnd_pl/12	G	2*grnd_pl/12	1*grnd_pl/12	G	r
+GW	343	1	2*grnd_pl/12	1*grnd_pl/12	G	3*grnd_pl/12	1*grnd_pl/12	G	r
+GW	344	1	3*grnd_pl/12	1*grnd_pl/12	G	4*grnd_pl/12	1*grnd_pl/12	G	r
+GW	345	1	4*grnd_pl/12	1*grnd_pl/12	G	5*grnd_pl/12	1*grnd_pl/12	G	r
+GW	346	1	5*grnd_pl/12	1*grnd_pl/12	G	6*grnd_pl/12	1*grnd_pl/12	G	r
+GW	347	1	0	1*grnd_pl/12	G	-grnd_pl/12	1*grnd_pl/12	G	r
+GW	348	1	-grnd_pl/12	1*grnd_pl/12	G	-2*grnd_pl/12	1*grnd_pl/12	G	r
+GW	349	1	-2*grnd_pl/12	1*grnd_pl/12	G	-3*grnd_pl/12	1*grnd_pl/12	G	r
+GW	350	1	-3*grnd_pl/12	1*grnd_pl/12	G	-4*grnd_pl/12	1*grnd_pl/12	G	r
+GW	351	1	-4*grnd_pl/12	1*grnd_pl/12	G	-5*grnd_pl/12	1*grnd_pl/12	G	r
+GW	352	1	-5*grnd_pl/12	1*grnd_pl/12	G	-6*grnd_pl/12	1*grnd_pl/12	G	r
+GW	353	1	-F	0	Z	-C	0	Z+0.01	A
+GW	354	1	C	0	Z+0.01	F	0	Z	A
+GW	355	1	0	-F	Z	0	-C	Z+0.05	A
+GW	356	1	0	C	Z+0.05	0	F	Z	A
+GW	357	1	0	C	Z+0.05	0	-C	Z+0.05	A
+GW	358	1	C	0	Z+0.01	-C	0	Z+0.01	A
+GE	1
+LD	5	1	0	0	24900000	'Antenna Blades
+LD	5	2	0	0	24900000	'Antenna Blades
+LD	5	3	0	0	24900000	'Antenna Blades
+LD	5	4	0	0	24900000	'Antenna Blades
+LD	5	5	0	0	24900000	'Antenna Blades
+LD	5	6	0	0	24900000	'Antenna Blades
+LD	5	7	0	0	24900000	'Antenna Blades
+LD	5	8	0	0	24900000	'Antenna Blades
+LD	5	9	0	0	24900000	'Antenna Blades
+LD	5	10	0	0	24900000	'Antenna Blades
+LD	5	11	0	0	24900000	'Antenna Blades
+LD	5	12	0	0	24900000	'Antenna Blades
+LD	5	13	0	0	24900000	'Antenna Blades
+LD	5	14	0	0	24900000	'Antenna Blades
+LD	5	15	0	0	24900000	'Antenna Blades
+LD	5	16	0	0	24900000	'Antenna Blades
+LD	5	17	0	0	24900000	'Antenna Blades
+LD	5	18	0	0	24900000	'Antenna Blades
+LD	5	19	0	0	24900000	'Antenna Blades
+LD	5	20	0	0	24900000	'Antenna Blades
+LD	5	21	0	0	24900000	'Antenna Blades
+LD	5	22	0	0	24900000	'Antenna Blades
+LD	5	23	0	0	24900000	'Antenna Blades
+LD	5	24	0	0	24900000	'Antenna Blades
+LD	5	25	0	0	24900000	'Antenna Blades
+LD	5	26	0	0	24900000	'Antenna Blades
+LD	5	27	0	0	24900000	'Antenna Blades
+LD	5	28	0	0	24900000	'Antenna Blades
+LD	5	29	0	0	24900000	'Antenna Blades
+LD	5	30	0	0	24900000	'Antenna Blades
+LD	5	31	0	0	24900000	'Antenna Blades
+LD	5	32	0	0	24900000	'Antenna Blades
+LD	5	33	0	0	24900000	'Antenna Blades
+LD	5	34	0	0	24900000	'Antenna Blades
+LD	5	35	0	0	24900000	'Antenna Blades
+LD	5	36	0	0	24900000	'Antenna Blades
+LD	5	37	0	0	24900000	'Antenna Blades
+LD	5	38	0	0	24900000	'Antenna Blades
+LD	5	39	0	0	24900000	'Antenna Blades
+LD	5	40	0	0	24900000	'Antenna Blades
+LD	5	357	0	0	58000000	'Antenna Blades
+LD	5	355	0	0	24900000	'Antenna Blades
+LD	5	358	0	0	58000000	'Antenna Blades
+LD	5	47	0	0	1390000	'Center Post
+LD	5	356	0	0	24900000	'Antenna Blades
+LD	5	353	0	0	24900000	'Antenna Blades
+LD	5	354	0	0	24900000	'Antenna Blades
+GN	2	0	0	0	13	0.005
+EK
+EX	0	358	1	0	1	0	0
+EX	0	357	1	0	0	-1	0
+FR	0	0	0	0	50	0
+EN
